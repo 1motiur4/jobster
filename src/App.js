@@ -1,7 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Landing, Error, Dashboard, Register } from "./pages";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { Landing, Error, Register } from "./pages";
+import {
+  Profile,
+  AddJob,
+  AllJobs,
+  Stats,
+  SharedLayout,
+} from "./pages/dashboard";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   return (
@@ -9,8 +16,25 @@ const App = () => {
       <Routes>
         <Route
           path="/"
-          element={<Dashboard />}
-        />
+          element={<SharedLayout />}
+        >
+          <Route
+            index
+            element={<Stats />}
+          />
+          <Route
+            path="all-jobs"
+            element={<AllJobs />}
+          />
+          <Route
+            path="add-job"
+            element={<AddJob />}
+          />
+          <Route
+            path="profile"
+            element={<Profile />}
+          />
+        </Route>
         <Route
           path="/landing"
           element={<Landing />}
@@ -24,7 +48,7 @@ const App = () => {
           element={<Error />}
         />
       </Routes>
-      <ToastContainer position="top-center"/>
+      <ToastContainer position="top-center" />
     </BrowserRouter>
   );
 };
