@@ -6,7 +6,7 @@ import {
   handleChange,
   clearValues,
   createJob,
-} from "../../features/user/job/jobSlice";
+} from "../../features/job/jobSlice";
 import { useEffect } from "react";
 
 const AddJob = () => {
