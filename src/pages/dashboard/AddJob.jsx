@@ -9,6 +9,7 @@ import {
   editJob,
 } from "../../features/job/jobSlice";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const AddJob = () => {
   const {
@@ -25,6 +26,7 @@ const AddJob = () => {
   } = useSelector((store) => store.job);
   const { user } = useSelector((store) => store.user);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
