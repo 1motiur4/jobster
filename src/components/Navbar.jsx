@@ -23,7 +23,6 @@ const Navbar = () => {
           className="toggle-btn"
           onClick={() => {
             toggle();
-            console.log("toggle sidebar");
           }}
         >
           <FaAlignLeft />
