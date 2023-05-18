@@ -11,7 +11,7 @@ const Stats = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(showStats());
-  });
+  }, []);
   return (
     <>
       <StatsContainer />
