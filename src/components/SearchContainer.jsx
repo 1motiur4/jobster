@@ -11,7 +11,7 @@ const SearchContainer = () => {
   const dispatch = useDispatch();
   const handleSearch = (e) => {
     const { name, value } = e.target;
-    //if (isLoading) return;
+    if (isLoading) return;
     dispatch(handleChange({ name, value }));
   };
   const handleSubmit = (e) => {
