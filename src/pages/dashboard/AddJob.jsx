@@ -45,6 +45,9 @@ const AddJob = () => {
       return;
     }
     dispatch(createJob({ position, company, jobLocation, jobType, status }));
+    setTimeout(() => {
+      navigate("/all-jobs");
+    }, 750);
   };
 
   const handleJobInput = (e) => {
